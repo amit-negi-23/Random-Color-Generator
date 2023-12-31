@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        button{
+            width: 200px;
+            height: 30px;
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+        div{
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            border: 2px solid black;
+            margin: 70px auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.1rem;
+        }
+    </style>
+</head>
+<body>
+        <h1>New rgb Color code</h1>
+        <button >Click me!</button>
+        <div>New random Color</div>
+
+    <script>
+
+        let btn =document.querySelector('button')
+        let div =document.querySelector('div')
+        let heading =document.querySelector('h1')
+    
+        btn.addEventListener('click',function(){
+            let red =Math.floor(Math.random()*255)
+            let green=Math.floor(Math.random()*255)
+            let blue =Math.floor(Math.random()*255)
+            let randomColor= `rgb(${red}, ${green}, ${blue})`
+            div.style.backgroundColor= randomColor
+            heading.innerText=randomColor
+        })
+        
+    </script>
+</body>
+</html>
